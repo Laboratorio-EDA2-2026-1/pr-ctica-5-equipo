@@ -74,7 +74,7 @@ int main(){
     //int r = B_lineal(A,encont,tamaño);
     //int r = B_linealM(A,encont,tamaño); 
     //int r = B_lineal_Centinela(A,encont,tamaño); 
-    //int r = B_lineal_Recursiva(A,encont,tamaño); 
+    //int r = B_lineal_Recursiva(A, tamaño, encont, 0); 
     if (r>-1){
         printf("elemento %d encontrado en la posición: [%d]", encont, r);
         }
@@ -83,12 +83,4 @@ int main(){
     }
 
     return 0;
-}
-
-
-
-        }
-    else{
-        printf("elemento %d no ha sido encontrado");
-    }
 }
