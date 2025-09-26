@@ -80,7 +80,7 @@ int main(void) {
     quicksort(arr, 0, n - 1); 
 
     printf("Ingrese el elemento a buscar:\n");
-    scanf("%d", o);
+    scanf("%d", &o);
 
 	int result = busqueda_binaria(arr, 0, n-1, o);
 	if (result != -1){
