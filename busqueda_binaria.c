@@ -91,4 +91,48 @@ int main(void) {
 	free(arr);
     return 0;
 }		
+
+//Ejercicio 2
+
+#include <stdio.h>
+
+int main(void) {
+	double x;
+	int pasos;
+
+	printf("Ingrese un número real del intervalo [0,1): ");
+	scanf("%f\n", &x);
+
+	printf("Ingrese el número de pasos: ");
+	scanf("%d\n", &pasos);
+
+	double l = 0, r = 1, m;
+
+	printf("Código binario de %f con %d pasos: ", x, pasos);
+
+	for (int i = 0; i < k; i++){
+		m = (l + r) / 2;
+
+		if (x > m){
+			printf("1");
+			l = m;
+		}else if (x < m){
+			printf("0");
+			r = m;
+		}else{
+			printf("1");
+			for (int j = i+1; j<k; j++){
+				printf("0");
+			}
+			break;
+		}
+	}
+	return 0;
+}
+			
+
+	
+
+
+
 	
