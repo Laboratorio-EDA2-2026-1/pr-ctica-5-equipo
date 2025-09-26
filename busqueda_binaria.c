@@ -92,7 +92,7 @@ int main(void) {
     return 0;
 }		
 
-//Ejercicio 2
+//Ejercicio 2 (iteración)
 
 #include <stdio.h>
 
@@ -130,6 +130,47 @@ int main(void) {
 	return 0;
 }
 			
+//Ejercicio 2 (recursivo)
+
+#include <stdio.h>
+
+void binario(double x, double l, double r, int pasos_restantes) {
+    if (pasos_restantes == 0) {
+        return;
+    }
+
+    double medio = (l + r) / 2;
+
+    if (x > medio) {
+        printf("1");
+        binario(x, medio, r, pasos_restantes - 1);
+    } else if (x < medio) {
+        printf("0");
+        binario(x, l, medio, pasos_restantes - 1);
+    } else {
+        printf("1");
+        for (int i = 0; i < pasos_restantes - 1; i++) {
+            printf("0");
+        }
+    }
+}
+
+int main(void) {
+    double x;
+    int pasos;
+
+    printf("Ingrese un número real del intervalo [0,1): ");
+    scanf("%lf", &x);
+
+    printf("Ingrese el número de pasos: ");
+    scanf("%d", &pasos);
+
+    printf("Código binario de %f con %d pasos: ", x, pasos);
+    binario(x, 0, 1, pasos);
+    printf("\n");
+
+    return 0;
+}
 
 	
 
