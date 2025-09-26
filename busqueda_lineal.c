@@ -57,7 +57,7 @@ int main(){
     }
 }
 
-//EJERCICIO 3
+//EJERCICIO 3 Busqueda lineal con centinela
 
 int B_lineal_Centinela(int A[], int x, int tamaño){ 
     int ix=-1;
@@ -82,6 +82,35 @@ int main(){
     int encont = 3;
     int tamaño = sizeof(A) / sizeof(A[0]);
     int r = B_lineal_Centinela(A,encont,tamaño);
+    if (r>-1){
+        printf("elemento %d encontrado en la posición: [%d]", encont, r);
+        }
+    else{
+        printf("elemento %d no ha sido encontrado");
+    }
+}
+
+//EJERCICIO 4 Busqueda Lineal recursiva
+
+int B_lineal_Recursiva(int A[], int tamaño, int x, int i){ 
+
+    int ix=-1;
+    if (i >= tamaño) {
+        return ix;
+    }
+
+    if (A[i] == x){
+        return i;
+    }
+    B_lineal_Recursiva(A, tamaño, x, i+1);
+
+}
+
+int main(){
+    int A[] = {4,1,3,7,5};
+    int encont = 3;
+    int tamaño = sizeof(A) / sizeof(A[0]);
+    int r = B_lineal_Recursiva(A, tamaño, encont, 0);
     if (r>-1){
         printf("elemento %d encontrado en la posición: [%d]", encont, r);
         }
