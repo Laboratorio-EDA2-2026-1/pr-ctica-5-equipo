@@ -3,13 +3,13 @@ void countsort(int a[],int n,int pos){
 	int salida[n+1];
 	int maximo = (a[0] / pos)%10;
 	for(int i=1;i<n;i++){
-		if((a[i]/pos) > maximo){
-			maximo = (a[i]/pos)%10;
+		if((a[i]/pos)%10 > maximo){
+			maximo = a[i];;
 		}
 	}
 	int b[maximo+1];
 	int c[maximo+1];
-	for(int i=0;i<n+1;i++){
+	for(int i=0;i<maximo+1;i++){
 		b[i]=0; c[i]=0;
 	}
 	for(int i=0;i<n;i++){
