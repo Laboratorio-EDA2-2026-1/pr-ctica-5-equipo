@@ -101,7 +101,7 @@ int main(void) {
 	int pasos;
 
 	printf("Ingrese un número real del intervalo [0,1): ");
-	scanf("%f\n", &x);
+	scanf("%lf\n", &x);
 
 	printf("Ingrese el número de pasos: ");
 	scanf("%d\n", &pasos);
@@ -110,7 +110,7 @@ int main(void) {
 
 	printf("Código binario de %f con %d pasos: ", x, pasos);
 
-	for (int i = 0; i < k; i++){
+	for (int i = 0; i < pasos; i++){
 		m = (l + r) / 2;
 
 		if (x > m){
