@@ -121,7 +121,7 @@ int main(void) {
 			r = m;
 		}else{
 			printf("1");
-			for (int j = i+1; j<k; j++){
+			for (int j = i+1; j<pasos; j++){
 				printf("0");
 			}
 			break;
